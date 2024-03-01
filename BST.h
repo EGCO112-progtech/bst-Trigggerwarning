@@ -121,14 +121,14 @@ void postOrder(TreeNodePtr treePtr) {
 void displayBST(TreeNodePtr root,int x) {
    int i;
     if (root != NULL) {
-      x=x+1;
+      x+=1;
 
 
          // Recursively display the right subtree
         displayBST(root->rightPtr,x);
-        for(i=0;i<x*3;i++)printf(" ");
+        for(i=0;i<x;i++)printf("    ");
          // Print the value of the current node
-        printf("%3d \n", root->data);
+        printf("%3d\n", root->data);
         // Recursively display the left subtree
         displayBST(root->leftPtr,x);
 
