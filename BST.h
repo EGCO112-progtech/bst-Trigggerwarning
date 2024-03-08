@@ -28,7 +28,7 @@ void insertNode_R(TreeNodePtr * t,int value){
 		   (*t)->data=value;
       }
       else{
-         printf("Error: Memory allocation failed\n");
+         printf("%d not inserted. No memory available.\n",value);
          return;
       }
   }
@@ -97,7 +97,7 @@ void inOrder( TreeNodePtr treePtr )
         
       inOrder( treePtr->leftPtr ); //Recursion to the left
  
-      printf("%3d ",treePtr->data) ;  //print the value 
+      printf("%3d",treePtr->data) ;  //print the value 
    
       inOrder( treePtr->rightPtr ); //Recursion to the right
    } // end if                          
@@ -105,7 +105,7 @@ void inOrder( TreeNodePtr treePtr )
 
 void preOrder(TreeNodePtr treePtr) {
     if (treePtr != NULL) {
-        printf("%3d ", treePtr->data);
+        printf("%3d", treePtr->data);
         preOrder(treePtr->leftPtr);
         preOrder(treePtr->rightPtr);
     }
@@ -115,13 +115,13 @@ void postOrder(TreeNodePtr treePtr) {
     if (treePtr != NULL) {
         postOrder(treePtr->leftPtr);
         postOrder(treePtr->rightPtr);
-        printf("%3d ", treePtr->data);
+        printf("%3d", treePtr->data);
     }
 }
 void displayBST(TreeNodePtr root,int x) {
    int i;
     if (root != NULL) {
-      x+=1;
+      
 
 
          // Recursively display the right subtree
