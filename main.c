@@ -25,7 +25,7 @@ int main( int argc, char** argv )
  printf("\npostnOrder\n" );   postOrder(b.root);
 
 
-    printf("\nTree\n");
+   //printf("\nTree\n");
     displayBST(b.root,0);
     printf("\n");
 } // end main
